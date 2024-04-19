@@ -22,12 +22,6 @@ public class Program {
             String sql = "UPDATE seller SET BaseSalary = %.2f WHERE DepartmentId = %d";
 
             int rows1 = stmt.executeUpdate(sql.formatted(2090.0, 1));
-            int x = 1;
-
-            if(x < 2) {
-                throw new SQLException("Fake Error");
-            }
-
             int rows2 = stmt.executeUpdate(sql.formatted(3090.0, 2));
             conn.commit();
 
